@@ -1,0 +1,9 @@
+.active-sort-option {
+    font-weight: bold;
+    border-bottom: 2px solid yellow;
+  }
+  
+  .inactive-sort-option {
+    font-weight: normal;
+  }
+  

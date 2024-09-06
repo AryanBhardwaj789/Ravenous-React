@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Searchbar.css';
 
-const Searchbar = () => {
+const Searchbar = ({ searchYelp }) => {
   const [searchInput, setSearchInput] = useState('');
   const [locationInput, setLocationInput] = useState('');
   const [sortingOption, setSortingOption] = useState('best_match');
@@ -24,11 +24,7 @@ const Searchbar = () => {
 
   const handleSearchButtonClick = (event) => {
     event.preventDefault();
-    if (!searchInput || !locationInput) {
-      console.error("Both search term and location are required.");
-      return;
-    }
-    console.log(`Searching Yelp with ${searchInput}, ${locationInput}, ${sortingOption}`);
+    searchYelp(searchInput, locationInput, sortingOption);
   };
   
   return (
@@ -41,14 +37,14 @@ const Searchbar = () => {
           Best Match
         </span>
         <span
-          className={`text-white text-lg font-poppins font-medium tracking-tight py-2 lg:py-4 cursor-pointer sort-option ${getSortOptionClass('highest_rated')}`}
-          onClick={() => handleSortOptionClick('highest_rated')}
+          className={`text-white text-lg font-poppins font-medium tracking-tight py-2 lg:py-4 cursor-pointer sort-option ${getSortOptionClass('rating')}`}
+          onClick={() => handleSortOptionClick('rating')}
         >
           Highest Rated
         </span>
         <span
-          className={`text-white text-lg font-poppins font-medium tracking-tight py-2 lg:py-4 cursor-pointer sort-option ${getSortOptionClass('most_reviewed')}`}
-          onClick={() => handleSortOptionClick('most_reviewed')}
+          className={`text-white text-lg font-poppins font-medium tracking-tight py-2 lg:py-4 cursor-pointer sort-option ${getSortOptionClass('review_count')}`}
+          onClick={() => handleSortOptionClick('review_count')}
         >
           Most Reviewed
         </span>

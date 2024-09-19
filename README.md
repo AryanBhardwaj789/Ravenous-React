@@ -59,4 +59,3 @@ To run this project locally, you'll need to have [Node.js](https://nodejs.org/) 
 ## Deployment
 
 The project is deployed on Vercel and can be accessed via this link.
-Live Demo -> https://findwithravenous.vercel.app/

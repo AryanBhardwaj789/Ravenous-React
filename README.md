@@ -31,7 +31,7 @@ To run this project locally, you'll need to have [Node.js](https://nodejs.org/) 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ravenous.git
+   git clone https://github.com/AryanBhardwaj789/Ravenous-React.git
 
 2. Navigate into the project directory:
    ```bash
@@ -55,7 +55,3 @@ To run this project locally, you'll need to have [Node.js](https://nodejs.org/) 
 - Enter a location (e.g., "Toronto").
 - Choose how you want to sort the results (Best Match, Highest Rated, or Most Reviewed)
 - Click "Let's Go" to see the list of businesses.
-
-## Deployment
-
-The project is deployed on Vercel and can be accessed via this link.
